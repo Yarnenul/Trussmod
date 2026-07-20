@@ -2,5 +2,6 @@
  "block.trussmod.truss_tower": "Tower Truss",
  "block.trussmod.speaker_bump": "Speaker Bump",
  "itemGroup.trussmod.stage_truss": "Stage Truss",
- "block.trussmod.speaker_bump_double": "Speaker Bump (Dubbel)"
+ "block.trussmod.speaker_bump_double": "Speaker Bump (Dubbel)",
+ "block.trussmod.horizontal_truss": "Horizontale Truss"
 }

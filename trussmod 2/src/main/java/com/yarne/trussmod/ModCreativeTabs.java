@@ -17,6 +17,7 @@ public class ModCreativeTabs {
                     .icon(() -> new ItemStack(ModItems.TRUSS_TOWER.get()))
                     .displayItems((params, output) -> {
                         output.accept(ModItems.TRUSS_TOWER.get());
+                        output.accept(ModItems.HORIZONTAL_TRUSS.get());
                         output.accept(ModItems.SPEAKER_BUMP.get());
                         output.accept(ModItems.SPEAKER_BUMP_DOUBLE.get());
                     })

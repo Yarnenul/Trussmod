@@ -5,6 +5,10 @@ on:
     branches: [ "main", "master" ]
   workflow_dispatch:
 
+defaults:
+  run:
+    working-directory: "trussmod 2"
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -28,4 +32,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: trussmod-jar
-          path: build/libs/*.jar
+          path: "trussmod 2/build/libs/*.jar"

@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "trussmod:block/speaker_bump" }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "part=bottom": { "model": "trussmod:block/truss_tower_empty" },
+    "part=middle": { "model": "trussmod:block/truss_tower" },
+    "part=top": { "model": "trussmod:block/truss_tower_empty" }
+  }
+}

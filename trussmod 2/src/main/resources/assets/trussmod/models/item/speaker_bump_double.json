@@ -1,5 +1,5 @@
 {
- "parent": "trussmod:block/speaker_bump_base",
+ "parent": "trussmod:block/speaker_bump_arm3",
  "display": {
   "gui": {
    "rotation": [

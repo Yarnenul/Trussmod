@@ -15,4 +15,7 @@ public class ModItems {
 
     public static final RegistryObject<Item> SPEAKER_BUMP = ITEMS.register("speaker_bump",
             () -> new BlockItem(ModBlocks.SPEAKER_BUMP.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> SPEAKER_BUMP_DOUBLE = ITEMS.register("speaker_bump_double",
+            () -> new BlockItem(ModBlocks.SPEAKER_BUMP_DOUBLE.get(), new Item.Properties()));
 }

@@ -12,6 +12,18 @@
   "facing=north,part=front3": {
    "model": "trussmod:block/speaker_bump_arm3"
   },
+  "facing=north,part=back1": {
+   "model": "trussmod:block/speaker_bump_arm1",
+   "y": 180
+  },
+  "facing=north,part=back2": {
+   "model": "trussmod:block/speaker_bump_arm2",
+   "y": 180
+  },
+  "facing=north,part=back3": {
+   "model": "trussmod:block/speaker_bump_arm3",
+   "y": 180
+  },
   "facing=east,part=base": {
    "model": "trussmod:block/speaker_bump_base",
    "y": 90
@@ -27,6 +39,18 @@
   "facing=east,part=front3": {
    "model": "trussmod:block/speaker_bump_arm3",
    "y": 90
+  },
+  "facing=east,part=back1": {
+   "model": "trussmod:block/speaker_bump_arm1",
+   "y": 270
+  },
+  "facing=east,part=back2": {
+   "model": "trussmod:block/speaker_bump_arm2",
+   "y": 270
+  },
+  "facing=east,part=back3": {
+   "model": "trussmod:block/speaker_bump_arm3",
+   "y": 270
   },
   "facing=south,part=base": {
    "model": "trussmod:block/speaker_bump_base",
@@ -44,6 +68,15 @@
    "model": "trussmod:block/speaker_bump_arm3",
    "y": 180
   },
+  "facing=south,part=back1": {
+   "model": "trussmod:block/speaker_bump_arm1"
+  },
+  "facing=south,part=back2": {
+   "model": "trussmod:block/speaker_bump_arm2"
+  },
+  "facing=south,part=back3": {
+   "model": "trussmod:block/speaker_bump_arm3"
+  },
   "facing=west,part=base": {
    "model": "trussmod:block/speaker_bump_base",
    "y": 270
@@ -59,6 +92,18 @@
   "facing=west,part=front3": {
    "model": "trussmod:block/speaker_bump_arm3",
    "y": 270
+  },
+  "facing=west,part=back1": {
+   "model": "trussmod:block/speaker_bump_arm1",
+   "y": 90
+  },
+  "facing=west,part=back2": {
+   "model": "trussmod:block/speaker_bump_arm2",
+   "y": 90
+  },
+  "facing=west,part=back3": {
+   "model": "trussmod:block/speaker_bump_arm3",
+   "y": 90
   }
  }
 }

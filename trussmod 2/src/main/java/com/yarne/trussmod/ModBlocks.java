@@ -1,6 +1,7 @@
 package com.yarne.trussmod;
 
 import com.yarne.trussmod.block.SpeakerBumpBlock;
+import com.yarne.trussmod.block.SpeakerBumpDoubleBlock;
 import com.yarne.trussmod.block.TrussTowerBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
@@ -23,6 +24,13 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> SPEAKER_BUMP = BLOCKS.register("speaker_bump",
             () -> new SpeakerBumpBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_BLACK)
+                    .strength(2.0F, 6.0F)
+                    .sound(SoundType.METAL)
+                    .noOcclusion()));
+
+    public static final RegistryObject<Block> SPEAKER_BUMP_DOUBLE = BLOCKS.register("speaker_bump_double",
+            () -> new SpeakerBumpDoubleBlock(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.COLOR_BLACK)
                     .strength(2.0F, 6.0F)
                     .sound(SoundType.METAL)

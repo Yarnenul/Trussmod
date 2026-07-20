@@ -18,6 +18,7 @@ public class ModCreativeTabs {
                     .displayItems((params, output) -> {
                         output.accept(ModItems.TRUSS_TOWER.get());
                         output.accept(ModItems.SPEAKER_BUMP.get());
+                        output.accept(ModItems.SPEAKER_BUMP_DOUBLE.get());
                     })
                     .build());
 }

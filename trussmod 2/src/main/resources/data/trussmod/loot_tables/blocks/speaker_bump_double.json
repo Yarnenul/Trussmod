@@ -6,13 +6,13 @@
    "entries": [
     {
      "type": "minecraft:item",
-     "name": "trussmod:speaker_bump"
+     "name": "trussmod:speaker_bump_double"
     }
    ],
    "conditions": [
     {
      "condition": "minecraft:block_state_property",
-     "block": "trussmod:speaker_bump",
+     "block": "trussmod:speaker_bump_double",
      "properties": {
       "part": "base"
      }

@@ -1,0 +1,34 @@
+{
+ "variants": {
+  "facing=north,wide=false": {
+   "model": "trussmod:block/chain_bridle"
+  },
+  "facing=north,wide=true": {
+   "model": "trussmod:block/chain_bridle_wide"
+  },
+  "facing=east,wide=false": {
+   "model": "trussmod:block/chain_bridle",
+   "y": 90
+  },
+  "facing=east,wide=true": {
+   "model": "trussmod:block/chain_bridle_wide",
+   "y": 90
+  },
+  "facing=south,wide=false": {
+   "model": "trussmod:block/chain_bridle",
+   "y": 180
+  },
+  "facing=south,wide=true": {
+   "model": "trussmod:block/chain_bridle_wide",
+   "y": 180
+  },
+  "facing=west,wide=false": {
+   "model": "trussmod:block/chain_bridle",
+   "y": 270
+  },
+  "facing=west,wide=true": {
+   "model": "trussmod:block/chain_bridle_wide",
+   "y": 270
+  }
+ }
+}

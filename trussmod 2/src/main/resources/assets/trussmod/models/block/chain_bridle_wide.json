@@ -1,0 +1,144 @@
+{
+ "render_type": "cutout",
+ "ambientocclusion": false,
+ "textures": {
+  "particle": "trussmod:block/chain_grey",
+  "chain": "trussmod:block/chain_grey",
+  "v": "trussmod:block/bridle_v",
+  "fan": "trussmod:block/bridle_fan4"
+ },
+ "elements": [
+  {
+   "from": [
+    -5.5,
+    0,
+    8
+   ],
+   "to": [
+    21.5,
+    8,
+    8
+   ],
+   "faces": {
+    "north": {
+     "texture": "#fan",
+     "uv": [
+      0,
+      0,
+      16,
+      16
+     ]
+    },
+    "south": {
+     "texture": "#fan",
+     "uv": [
+      0,
+      0,
+      16,
+      16
+     ]
+    }
+   }
+  },
+  {
+   "from": [
+    8,
+    0,
+    0
+   ],
+   "to": [
+    8,
+    8,
+    16
+   ],
+   "faces": {
+    "east": {
+     "texture": "#v",
+     "uv": [
+      0,
+      0,
+      16,
+      16
+     ]
+    },
+    "west": {
+     "texture": "#v",
+     "uv": [
+      0,
+      0,
+      16,
+      16
+     ]
+    }
+   }
+  },
+  {
+   "from": [
+    6.9,
+    0,
+    6.9
+   ],
+   "to": [
+    9.1,
+    2.4,
+    9.1
+   ],
+   "faces": {
+    "north": {
+     "texture": "#chain",
+     "uv": [
+      0,
+      0,
+      16,
+      16
+     ]
+    },
+    "south": {
+     "texture": "#chain",
+     "uv": [
+      0,
+      0,
+      16,
+      16
+     ]
+    },
+    "east": {
+     "texture": "#chain",
+     "uv": [
+      0,
+      0,
+      16,
+      16
+     ]
+    },
+    "west": {
+     "texture": "#chain",
+     "uv": [
+      0,
+      0,
+      16,
+      16
+     ]
+    },
+    "up": {
+     "texture": "#chain",
+     "uv": [
+      0,
+      0,
+      16,
+      16
+     ]
+    },
+    "down": {
+     "texture": "#chain",
+     "uv": [
+      0,
+      0,
+      16,
+      16
+     ]
+    }
+   }
+  }
+ ]
+}

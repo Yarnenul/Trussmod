@@ -26,6 +26,7 @@ public class ModCreativeTabs {
                         output.accept(ModItems.SPEAKER_BUMP_DOUBLE.get());
                         output.accept(ModItems.SPEAKER_BUMP_QUAD.get());
                         output.accept(ModItems.SPEAKER_BUMP_QUAD_ASYM.get());
+                        output.accept(ModItems.CHAIN_BRIDLE.get());
                     })
                     .build());
 }

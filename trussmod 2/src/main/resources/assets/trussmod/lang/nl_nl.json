@@ -9,5 +9,6 @@
  "block.trussmod.truss_2x2": "Truss 2x2",
  "block.trussmod.horizontal_truss_2x2": "Horizontale Truss 2x2",
  "block.trussmod.speaker_bump_quad": "Speaker Bump Quad (3+3)",
- "block.trussmod.speaker_bump_quad_asym": "Speaker Bump Quad (4+3)"
+ "block.trussmod.speaker_bump_quad_asym": "Speaker Bump Quad (4+3)",
+ "block.trussmod.chain_bridle": "Chain Bridle"
 }

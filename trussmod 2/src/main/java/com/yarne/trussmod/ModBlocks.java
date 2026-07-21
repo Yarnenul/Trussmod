@@ -2,6 +2,7 @@ package com.yarne.trussmod;
 
 import com.yarne.trussmod.block.BigHorizontalTrussBlock;
 import com.yarne.trussmod.block.BigTrussTowerBlock;
+import com.yarne.trussmod.block.ChainBridleBlock;
 import com.yarne.trussmod.block.HorizontalTrussBlock;
 import com.yarne.trussmod.block.SpeakerBumpBlock;
 import com.yarne.trussmod.block.SpeakerBumpDoubleBlock;
@@ -90,5 +91,12 @@ public class ModBlocks {
                     .mapColor(MapColor.COLOR_BLACK)
                     .strength(2.0F, 6.0F)
                     .sound(SoundType.METAL)
+                    .noOcclusion()));
+
+    public static final RegistryObject<Block> CHAIN_BRIDLE = BLOCKS.register("chain_bridle",
+            () -> new ChainBridleBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_GRAY)
+                    .strength(1.5F, 6.0F)
+                    .sound(SoundType.CHAIN)
                     .noOcclusion()));
 }

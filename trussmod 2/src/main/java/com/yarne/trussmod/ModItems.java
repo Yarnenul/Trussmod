@@ -39,4 +39,7 @@ public class ModItems {
 
     public static final RegistryObject<Item> SPEAKER_BUMP_QUAD_ASYM = ITEMS.register("speaker_bump_quad_asym",
             () -> new BlockItem(ModBlocks.SPEAKER_BUMP_QUAD_ASYM.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> CHAIN_BRIDLE = ITEMS.register("chain_bridle",
+            () -> new BlockItem(ModBlocks.CHAIN_BRIDLE.get(), new Item.Properties()));
 }

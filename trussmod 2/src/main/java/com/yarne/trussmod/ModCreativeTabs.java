@@ -20,8 +20,12 @@ public class ModCreativeTabs {
                         output.accept(ModItems.HORIZONTAL_TRUSS.get());
                         output.accept(ModItems.BIG_TRUSS_TOWER.get());
                         output.accept(ModItems.BIG_HORIZONTAL_TRUSS.get());
+                        output.accept(ModItems.TRUSS_2X2.get());
+                        output.accept(ModItems.HORIZONTAL_TRUSS_2X2.get());
                         output.accept(ModItems.SPEAKER_BUMP.get());
                         output.accept(ModItems.SPEAKER_BUMP_DOUBLE.get());
+                        output.accept(ModItems.SPEAKER_BUMP_QUAD.get());
+                        output.accept(ModItems.SPEAKER_BUMP_QUAD_ASYM.get());
                     })
                     .build());
 }

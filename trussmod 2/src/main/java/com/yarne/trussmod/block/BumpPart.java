@@ -7,6 +7,7 @@ public enum BumpPart implements StringRepresentable {
     FRONT1("front1", 1),
     FRONT2("front2", 2),
     FRONT3("front3", 3),
+    FRONT4("front4", 4),
     BACK1("back1", -1),
     BACK2("back2", -2),
     BACK3("back3", -3);

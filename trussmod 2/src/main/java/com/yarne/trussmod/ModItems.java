@@ -27,4 +27,16 @@ public class ModItems {
 
     public static final RegistryObject<Item> SPEAKER_BUMP_DOUBLE = ITEMS.register("speaker_bump_double",
             () -> new BlockItem(ModBlocks.SPEAKER_BUMP_DOUBLE.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> TRUSS_2X2 = ITEMS.register("truss_2x2",
+            () -> new BlockItem(ModBlocks.TRUSS_2X2.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> HORIZONTAL_TRUSS_2X2 = ITEMS.register("horizontal_truss_2x2",
+            () -> new BlockItem(ModBlocks.HORIZONTAL_TRUSS_2X2.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> SPEAKER_BUMP_QUAD = ITEMS.register("speaker_bump_quad",
+            () -> new BlockItem(ModBlocks.SPEAKER_BUMP_QUAD.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> SPEAKER_BUMP_QUAD_ASYM = ITEMS.register("speaker_bump_quad_asym",
+            () -> new BlockItem(ModBlocks.SPEAKER_BUMP_QUAD_ASYM.get(), new Item.Properties()));
 }

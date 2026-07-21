@@ -1,0 +1,124 @@
+{
+ "variants": {
+  "facing=north,part=base": {
+   "model": "trussmod:block/speaker_bump4_base"
+  },
+  "facing=north,part=front1": {
+   "model": "trussmod:block/speaker_bump4_arm1"
+  },
+  "facing=north,part=front2": {
+   "model": "trussmod:block/speaker_bump4_mid"
+  },
+  "facing=north,part=front3": {
+   "model": "trussmod:block/speaker_bump4_mid_hoist"
+  },
+  "facing=north,part=front4": {
+   "model": "trussmod:block/speaker_bump4_end"
+  },
+  "facing=north,part=back1": {
+   "model": "trussmod:block/speaker_bump4_arm1",
+   "y": 180
+  },
+  "facing=north,part=back2": {
+   "model": "trussmod:block/speaker_bump4_mid_hoist",
+   "y": 180
+  },
+  "facing=north,part=back3": {
+   "model": "trussmod:block/speaker_bump4_end",
+   "y": 180
+  },
+  "facing=east,part=base": {
+   "model": "trussmod:block/speaker_bump4_base",
+   "y": 90
+  },
+  "facing=east,part=front1": {
+   "model": "trussmod:block/speaker_bump4_arm1",
+   "y": 90
+  },
+  "facing=east,part=front2": {
+   "model": "trussmod:block/speaker_bump4_mid",
+   "y": 90
+  },
+  "facing=east,part=front3": {
+   "model": "trussmod:block/speaker_bump4_mid_hoist",
+   "y": 90
+  },
+  "facing=east,part=front4": {
+   "model": "trussmod:block/speaker_bump4_end",
+   "y": 90
+  },
+  "facing=east,part=back1": {
+   "model": "trussmod:block/speaker_bump4_arm1",
+   "y": 270
+  },
+  "facing=east,part=back2": {
+   "model": "trussmod:block/speaker_bump4_mid_hoist",
+   "y": 270
+  },
+  "facing=east,part=back3": {
+   "model": "trussmod:block/speaker_bump4_end",
+   "y": 270
+  },
+  "facing=south,part=base": {
+   "model": "trussmod:block/speaker_bump4_base",
+   "y": 180
+  },
+  "facing=south,part=front1": {
+   "model": "trussmod:block/speaker_bump4_arm1",
+   "y": 180
+  },
+  "facing=south,part=front2": {
+   "model": "trussmod:block/speaker_bump4_mid",
+   "y": 180
+  },
+  "facing=south,part=front3": {
+   "model": "trussmod:block/speaker_bump4_mid_hoist",
+   "y": 180
+  },
+  "facing=south,part=front4": {
+   "model": "trussmod:block/speaker_bump4_end",
+   "y": 180
+  },
+  "facing=south,part=back1": {
+   "model": "trussmod:block/speaker_bump4_arm1"
+  },
+  "facing=south,part=back2": {
+   "model": "trussmod:block/speaker_bump4_mid_hoist"
+  },
+  "facing=south,part=back3": {
+   "model": "trussmod:block/speaker_bump4_end"
+  },
+  "facing=west,part=base": {
+   "model": "trussmod:block/speaker_bump4_base",
+   "y": 270
+  },
+  "facing=west,part=front1": {
+   "model": "trussmod:block/speaker_bump4_arm1",
+   "y": 270
+  },
+  "facing=west,part=front2": {
+   "model": "trussmod:block/speaker_bump4_mid",
+   "y": 270
+  },
+  "facing=west,part=front3": {
+   "model": "trussmod:block/speaker_bump4_mid_hoist",
+   "y": 270
+  },
+  "facing=west,part=front4": {
+   "model": "trussmod:block/speaker_bump4_end",
+   "y": 270
+  },
+  "facing=west,part=back1": {
+   "model": "trussmod:block/speaker_bump4_arm1",
+   "y": 90
+  },
+  "facing=west,part=back2": {
+   "model": "trussmod:block/speaker_bump4_mid_hoist",
+   "y": 90
+  },
+  "facing=west,part=back3": {
+   "model": "trussmod:block/speaker_bump4_end",
+   "y": 90
+  }
+ }
+}

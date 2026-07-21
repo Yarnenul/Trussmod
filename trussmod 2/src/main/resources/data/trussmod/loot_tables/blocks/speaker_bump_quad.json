@@ -1,0 +1,23 @@
+{
+ "type": "minecraft:block",
+ "pools": [
+  {
+   "rolls": 1,
+   "entries": [
+    {
+     "type": "minecraft:item",
+     "name": "trussmod:speaker_bump_quad"
+    }
+   ],
+   "conditions": [
+    {
+     "condition": "minecraft:block_state_property",
+     "block": "trussmod:speaker_bump_quad",
+     "properties": {
+      "part": "base"
+     }
+    }
+   ]
+  }
+ ]
+}

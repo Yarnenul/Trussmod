@@ -5,5 +5,9 @@
  "block.trussmod.speaker_bump_double": "Speaker Bump (Dubbel)",
  "block.trussmod.horizontal_truss": "Horizontale Truss",
  "block.trussmod.big_truss_tower": "Grote Tower Truss",
- "block.trussmod.big_horizontal_truss": "Grote Horizontale Truss"
+ "block.trussmod.big_horizontal_truss": "Grote Horizontale Truss",
+ "block.trussmod.truss_2x2": "Truss 2x2",
+ "block.trussmod.horizontal_truss_2x2": "Horizontale Truss 2x2",
+ "block.trussmod.speaker_bump_quad": "Speaker Bump Quad (3+3)",
+ "block.trussmod.speaker_bump_quad_asym": "Speaker Bump Quad (4+3)"
 }

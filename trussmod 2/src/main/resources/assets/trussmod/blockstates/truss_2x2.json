@@ -1,0 +1,10 @@
+{
+ "variants": {
+  "part=bottom": {
+   "model": "trussmod:block/truss_2x2"
+  },
+  "part=top": {
+   "model": "trussmod:block/truss_tower_empty"
+  }
+ }
+}

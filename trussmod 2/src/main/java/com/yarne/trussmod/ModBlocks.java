@@ -5,6 +5,10 @@ import com.yarne.trussmod.block.BigTrussTowerBlock;
 import com.yarne.trussmod.block.HorizontalTrussBlock;
 import com.yarne.trussmod.block.SpeakerBumpBlock;
 import com.yarne.trussmod.block.SpeakerBumpDoubleBlock;
+import com.yarne.trussmod.block.SpeakerBumpQuadAsymBlock;
+import com.yarne.trussmod.block.SpeakerBumpQuadBlock;
+import com.yarne.trussmod.block.Truss22Block;
+import com.yarne.trussmod.block.Truss22HorizontalBlock;
 import com.yarne.trussmod.block.TrussTowerBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
@@ -55,6 +59,34 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> SPEAKER_BUMP_DOUBLE = BLOCKS.register("speaker_bump_double",
             () -> new SpeakerBumpDoubleBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_BLACK)
+                    .strength(2.0F, 6.0F)
+                    .sound(SoundType.METAL)
+                    .noOcclusion()));
+
+    public static final RegistryObject<Block> TRUSS_2X2 = BLOCKS.register("truss_2x2",
+            () -> new Truss22Block(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_BLACK)
+                    .strength(2.0F, 6.0F)
+                    .sound(SoundType.METAL)
+                    .noOcclusion()));
+
+    public static final RegistryObject<Block> HORIZONTAL_TRUSS_2X2 = BLOCKS.register("horizontal_truss_2x2",
+            () -> new Truss22HorizontalBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_BLACK)
+                    .strength(2.0F, 6.0F)
+                    .sound(SoundType.METAL)
+                    .noOcclusion()));
+
+    public static final RegistryObject<Block> SPEAKER_BUMP_QUAD = BLOCKS.register("speaker_bump_quad",
+            () -> new SpeakerBumpQuadBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_BLACK)
+                    .strength(2.0F, 6.0F)
+                    .sound(SoundType.METAL)
+                    .noOcclusion()));
+
+    public static final RegistryObject<Block> SPEAKER_BUMP_QUAD_ASYM = BLOCKS.register("speaker_bump_quad_asym",
+            () -> new SpeakerBumpQuadAsymBlock(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.COLOR_BLACK)
                     .strength(2.0F, 6.0F)
                     .sound(SoundType.METAL)

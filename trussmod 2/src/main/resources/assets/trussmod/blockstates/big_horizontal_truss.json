@@ -1,0 +1,82 @@
+{
+ "variants": {
+  "facing=north,segment=0": {
+   "model": "trussmod:block/truss_tower_empty"
+  },
+  "facing=north,segment=1": {
+   "model": "trussmod:block/big_horizontal_truss"
+  },
+  "facing=north,segment=2": {
+   "model": "trussmod:block/truss_tower_empty"
+  },
+  "facing=north,segment=3": {
+   "model": "trussmod:block/truss_tower_empty"
+  },
+  "facing=north,segment=4": {
+   "model": "trussmod:block/big_horizontal_truss"
+  },
+  "facing=north,segment=5": {
+   "model": "trussmod:block/truss_tower_empty"
+  },
+  "facing=east,segment=0": {
+   "model": "trussmod:block/truss_tower_empty"
+  },
+  "facing=east,segment=1": {
+   "model": "trussmod:block/big_horizontal_truss",
+   "y": 90
+  },
+  "facing=east,segment=2": {
+   "model": "trussmod:block/truss_tower_empty"
+  },
+  "facing=east,segment=3": {
+   "model": "trussmod:block/truss_tower_empty"
+  },
+  "facing=east,segment=4": {
+   "model": "trussmod:block/big_horizontal_truss",
+   "y": 90
+  },
+  "facing=east,segment=5": {
+   "model": "trussmod:block/truss_tower_empty"
+  },
+  "facing=south,segment=0": {
+   "model": "trussmod:block/truss_tower_empty"
+  },
+  "facing=south,segment=1": {
+   "model": "trussmod:block/big_horizontal_truss",
+   "y": 180
+  },
+  "facing=south,segment=2": {
+   "model": "trussmod:block/truss_tower_empty"
+  },
+  "facing=south,segment=3": {
+   "model": "trussmod:block/truss_tower_empty"
+  },
+  "facing=south,segment=4": {
+   "model": "trussmod:block/big_horizontal_truss",
+   "y": 180
+  },
+  "facing=south,segment=5": {
+   "model": "trussmod:block/truss_tower_empty"
+  },
+  "facing=west,segment=0": {
+   "model": "trussmod:block/truss_tower_empty"
+  },
+  "facing=west,segment=1": {
+   "model": "trussmod:block/big_horizontal_truss",
+   "y": 270
+  },
+  "facing=west,segment=2": {
+   "model": "trussmod:block/truss_tower_empty"
+  },
+  "facing=west,segment=3": {
+   "model": "trussmod:block/truss_tower_empty"
+  },
+  "facing=west,segment=4": {
+   "model": "trussmod:block/big_horizontal_truss",
+   "y": 270
+  },
+  "facing=west,segment=5": {
+   "model": "trussmod:block/truss_tower_empty"
+  }
+ }
+}

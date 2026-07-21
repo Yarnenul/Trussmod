@@ -1,0 +1,22 @@
+{
+ "variants": {
+  "segment=0": {
+   "model": "trussmod:block/truss_tower_empty"
+  },
+  "segment=1": {
+   "model": "trussmod:block/big_truss_tower"
+  },
+  "segment=2": {
+   "model": "trussmod:block/truss_tower_empty"
+  },
+  "segment=3": {
+   "model": "trussmod:block/truss_tower_empty"
+  },
+  "segment=4": {
+   "model": "trussmod:block/big_truss_tower"
+  },
+  "segment=5": {
+   "model": "trussmod:block/truss_tower_empty"
+  }
+ }
+}

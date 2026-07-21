@@ -1,0 +1,23 @@
+{
+ "type": "minecraft:block",
+ "pools": [
+  {
+   "rolls": 1,
+   "entries": [
+    {
+     "type": "minecraft:item",
+     "name": "trussmod:big_horizontal_truss"
+    }
+   ],
+   "conditions": [
+    {
+     "condition": "minecraft:block_state_property",
+     "block": "trussmod:big_horizontal_truss",
+     "properties": {
+      "segment": "0"
+     }
+    }
+   ]
+  }
+ ]
+}

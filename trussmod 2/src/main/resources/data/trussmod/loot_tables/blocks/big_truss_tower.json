@@ -1,0 +1,23 @@
+{
+ "type": "minecraft:block",
+ "pools": [
+  {
+   "rolls": 1,
+   "entries": [
+    {
+     "type": "minecraft:item",
+     "name": "trussmod:big_truss_tower"
+    }
+   ],
+   "conditions": [
+    {
+     "condition": "minecraft:block_state_property",
+     "block": "trussmod:big_truss_tower",
+     "properties": {
+      "segment": "0"
+     }
+    }
+   ]
+  }
+ ]
+}

@@ -2,7 +2,6 @@ package com.yarne.trussmod.block;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.util.StringRepresentable;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
@@ -15,7 +14,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
-import net.minecraft.world.level.block.state.properties.EnumProperty;
+import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
@@ -23,35 +22,33 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import javax.annotation.Nullable;
 
 /**
- * Horizontale truss: 1,5 x 1,5 blok doorsnede en 3 blokken lang.
- * 1 item plaatsen = de volledige ligger van 3 blokken in de kijkrichting
- * van de speler. Visueel 2 truss-segmenten van elk 1,5 blok, net zoals de toren.
+ * Grote horizontale truss: 3 x 3 blokken doorsnede en 6 blokken lang.
+ * 1 item plaatsen = de volledige ligger in de kijkrichting, met automatische
+ * richting-flip zodat je liggers achter elkaar kan doorbouwen.
  */
-public class HorizontalTrussBlock extends Block {
+public class BigHorizontalTrussBlock extends Block {
 
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
-    public static final EnumProperty<Part> PART = EnumProperty.create("part", Part.class);
+    public static final IntegerProperty SEGMENT = IntegerProperty.create("segment", 0, 5);
 
-    private static final VoxelShape SHAPE_Z =
-            Shapes.box(-4.0 / 16.0, -4.0 / 16.0, 0.0, 20.0 / 16.0, 20.0 / 16.0, 1.0);
-    private static final VoxelShape SHAPE_X =
-            Shapes.box(0.0, -4.0 / 16.0, -4.0 / 16.0, 1.0, 20.0 / 16.0, 20.0 / 16.0);
+    private static final VoxelShape SHAPE =
+            Shapes.box(-1.0, -1.0, -1.0, 2.0, 2.0, 2.0);
 
-    public HorizontalTrussBlock(Properties properties) {
+    public BigHorizontalTrussBlock(Properties properties) {
         super(properties);
         this.registerDefaultState(this.stateDefinition.any()
                 .setValue(FACING, Direction.NORTH)
-                .setValue(PART, Part.START));
+                .setValue(SEGMENT, 0));
     }
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(FACING, PART);
+        builder.add(FACING, SEGMENT);
     }
 
     @Override
     public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
-        return state.getValue(FACING).getAxis() == Direction.Axis.Z ? SHAPE_Z : SHAPE_X;
+        return SHAPE;
     }
 
     @Nullable
@@ -62,15 +59,14 @@ public class HorizontalTrussBlock extends Block {
         Direction preferred = context.getHorizontalDirection();
         for (Direction facing : new Direction[]{preferred, preferred.getOpposite()}) {
             boolean free = true;
-            for (Part part : Part.values()) {
-                if (part == Part.START) continue;
-                if (!level.getBlockState(pos.relative(facing, part.offset())).canBeReplaced(context)) {
+            for (int i = 1; i <= 5; i++) {
+                if (!level.getBlockState(pos.relative(facing, i)).canBeReplaced(context)) {
                     free = false;
                     break;
                 }
             }
             if (free) {
-                return this.defaultBlockState().setValue(FACING, facing).setValue(PART, Part.START);
+                return this.defaultBlockState().setValue(FACING, facing).setValue(SEGMENT, 0);
             }
         }
         return null;
@@ -79,9 +75,8 @@ public class HorizontalTrussBlock extends Block {
     @Override
     public void setPlacedBy(Level level, BlockPos pos, BlockState state, @Nullable LivingEntity placer, ItemStack stack) {
         Direction facing = state.getValue(FACING);
-        for (Part part : Part.values()) {
-            if (part == Part.START) continue;
-            level.setBlock(pos.relative(facing, part.offset()), state.setValue(PART, part), 3);
+        for (int i = 1; i <= 5; i++) {
+            level.setBlock(pos.relative(facing, i), state.setValue(SEGMENT, i), 3);
         }
     }
 
@@ -89,12 +84,12 @@ public class HorizontalTrussBlock extends Block {
     public void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean isMoving) {
         if (!isMoving && !state.is(newState.getBlock()) && !level.isClientSide) {
             Direction facing = state.getValue(FACING);
-            BlockPos startPos = pos.relative(facing, -state.getValue(PART).offset());
-            for (Part part : Part.values()) {
-                BlockPos target = startPos.relative(facing, part.offset());
+            BlockPos startPos = pos.relative(facing, -state.getValue(SEGMENT));
+            for (int i = 0; i <= 5; i++) {
+                BlockPos target = startPos.relative(facing, i);
                 if (target.equals(pos)) continue;
                 BlockState targetState = level.getBlockState(target);
-                if (targetState.is(this) && targetState.getValue(PART) == part) {
+                if (targetState.is(this) && targetState.getValue(SEGMENT) == i) {
                     level.destroyBlock(target, true);
                 }
             }
@@ -104,43 +99,15 @@ public class HorizontalTrussBlock extends Block {
 
     @Override
     public void playerWillDestroy(Level level, BlockPos pos, BlockState state, Player player) {
-        if (!level.isClientSide && player.isCreative() && state.getValue(PART) != Part.START) {
+        if (!level.isClientSide && player.isCreative() && state.getValue(SEGMENT) != 0) {
             Direction facing = state.getValue(FACING);
-            BlockPos startPos = pos.relative(facing, -state.getValue(PART).offset());
+            BlockPos startPos = pos.relative(facing, -state.getValue(SEGMENT));
             BlockState startState = level.getBlockState(startPos);
-            if (startState.is(this) && startState.getValue(PART) == Part.START) {
+            if (startState.is(this) && startState.getValue(SEGMENT) == 0) {
                 level.setBlock(startPos, Blocks.AIR.defaultBlockState(), 35);
                 level.levelEvent(player, 2001, startPos, Block.getId(startState));
             }
         }
         super.playerWillDestroy(level, pos, state, player);
-    }
-
-    public enum Part implements StringRepresentable {
-        START("start", 0),
-        MIDDLE("middle", 1),
-        END("end", 2);
-
-        private final String name;
-        private final int offset;
-
-        Part(String name, int offset) {
-            this.name = name;
-            this.offset = offset;
-        }
-
-        public int offset() {
-            return this.offset;
-        }
-
-        @Override
-        public String getSerializedName() {
-            return this.name;
-        }
-
-        @Override
-        public String toString() {
-            return this.name;
-        }
     }
 }

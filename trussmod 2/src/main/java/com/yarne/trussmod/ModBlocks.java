@@ -1,5 +1,7 @@
 package com.yarne.trussmod;
 
+import com.yarne.trussmod.block.BigHorizontalTrussBlock;
+import com.yarne.trussmod.block.BigTrussTowerBlock;
 import com.yarne.trussmod.block.HorizontalTrussBlock;
 import com.yarne.trussmod.block.SpeakerBumpBlock;
 import com.yarne.trussmod.block.SpeakerBumpDoubleBlock;
@@ -25,6 +27,20 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> HORIZONTAL_TRUSS = BLOCKS.register("horizontal_truss",
             () -> new HorizontalTrussBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_BLACK)
+                    .strength(2.0F, 6.0F)
+                    .sound(SoundType.METAL)
+                    .noOcclusion()));
+
+    public static final RegistryObject<Block> BIG_TRUSS_TOWER = BLOCKS.register("big_truss_tower",
+            () -> new BigTrussTowerBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_BLACK)
+                    .strength(2.0F, 6.0F)
+                    .sound(SoundType.METAL)
+                    .noOcclusion()));
+
+    public static final RegistryObject<Block> BIG_HORIZONTAL_TRUSS = BLOCKS.register("big_horizontal_truss",
+            () -> new BigHorizontalTrussBlock(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.COLOR_BLACK)
                     .strength(2.0F, 6.0F)
                     .sound(SoundType.METAL)
